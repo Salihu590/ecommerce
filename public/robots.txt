@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /cart
+Disallow: /checkout
+Disallow: /account
+Disallow: /login
+Disallow: /create-account
+Disallow: /enter-password
+Disallow: /payment-success
+Allow: /
