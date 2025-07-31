@@ -15,7 +15,7 @@ export const vegetables = [
 ];
 
 export const pantryStaples = [
-  { id: 11, name: 'Rice', price: 4000.00, image: '/images/rice.jpg' },
+  { id: 11, name: 'Rice', price: 3000.00, image: '/images/rice.jpg' },
   { id: 12, name: 'Beans', price: 3500.00, image: '/images/beans.jpg' },
   { id: 13, name: 'Spaghetti', price: 1200.00, image: '/images/spaghetti.jpg' },
   { id: 14, name: 'Oil', price: 15000.00, image: '/images/oil.jpg' },
