@@ -9,7 +9,7 @@ export const fruits = [
 export const vegetables = [
   { id: 6, name: 'Carrot', price: 500.00, image: '/images/carrot.jpg' },
   { id: 7, name: 'Tomato', price: 600.00, image: '/images/tomato.jpg' },
-  { id: 8, name: 'Lettuce', price: 150.00, image: '/images/lettuce.jpg' },
+  { id: 8, name: 'Lettuce', price: 250.00, image: '/images/lettuce.jpg' },
   { id: 9, name: 'Cucumber', price: 300.00, image: '/images/cucumber.jpg' },
   { id: 10, name: 'Onion', price: 100.00, image: '/images/onion.jpg' },
 ];
