@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const GoalsSection = () => {
   return (
@@ -8,12 +8,16 @@ const GoalsSection = () => {
         {/* Left Column - Title and Description */}
         <div className="text-left lg:w-1/2">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            <span className="bg-black text-white px-4 py-1 rounded-xl inline-block">Goals</span>{' '}
+            <span className="bg-black text-white px-4 py-1 rounded-xl inline-block">
+              Goals
+            </span>{" "}
             Of Our Wholesale Company
           </h2>
           <p className="text-gray-600 text-base sm:text-lg max-w-md mb-12">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper dolor lacus, nec ornare velit cursus sed. Cras in molestie arcu, et
-            auctor mi. Sed purus orci, sodales non metus vel, cursus bibendum turpis.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper
+            dolor lacus, nec ornare velit cursus sed. Cras in molestie arcu, et
+            auctor mi. Sed purus orci, sodales non metus vel, cursus bibendum
+            turpis.
           </p>
         </div>
 
@@ -23,20 +27,20 @@ const GoalsSection = () => {
           <motion.div
             className="bg-white text-black rounded-xl p-6 shadow-md w-[300px] h-[200px] flex items-center"
             whileHover={{
-              backgroundColor: '#16a34a', // bg-green-600
-              color: '#ffffff', // text-white
+              backgroundColor: "#16a34a", // bg-green-600
+              color: "#ffffff", // text-white
               scale: 1.1, // hover:scale-110
               x: -6, // hover:-translate-x-6 (leftward lift)
-              boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)', // Enhanced shadow
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
             }}
             whileTap={{
-              backgroundColor: '#16a34a', // bg-green-600
-              color: '#ffffff', // text-white
+              backgroundColor: "#16a34a", // bg-green-600
+              color: "#ffffff", // text-white
               scale: 1.1, // tap:scale-110
               x: -6, // tap:-translate-x-6 (leftward lift)
-              boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)', // Enhanced shadow
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
             }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
           >
             <div className="flex items-start">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mr-4">
@@ -47,9 +51,12 @@ const GoalsSection = () => {
                 />
               </div>
               <div className="text-left">
-                <h3 className="text-xl font-semibold mb-2">Convenience Accessibility</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  Convenience Accessibility
+                </h3>
                 <p className="text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper dolor lacus, nec ornare velit cursus sed.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  semper dolor lacus, nec ornare velit cursus sed.
                 </p>
               </div>
             </div>
@@ -59,20 +66,20 @@ const GoalsSection = () => {
           <motion.div
             className="bg-white text-black rounded-xl p-6 shadow-md w-[300px] h-[200px] flex items-center"
             whileHover={{
-              backgroundColor: '#16a34a', // bg-green-600
-              color: '#ffffff', // text-white
+              backgroundColor: "#16a34a", // bg-green-600
+              color: "#ffffff", // text-white
               scale: 1.1, // hover:scale-110
               x: -6, // hover:-translate-x-6 (leftward lift)
-              boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)', // Enhanced shadow
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
             }}
             whileTap={{
-              backgroundColor: '#16a34a', // bg-green-600
-              color: '#ffffff', // text-white
+              backgroundColor: "#16a34a", // bg-green-600
+              color: "#ffffff", // text-white
               scale: 1.1, // tap:scale-110
               x: -6, // tap:-translate-x-6 (leftward lift)
-              boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)', // Enhanced shadow
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
             }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
           >
             <div className="flex items-start">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mr-4">
@@ -83,9 +90,12 @@ const GoalsSection = () => {
                 />
               </div>
               <div className="text-left">
-                <h3 className="text-xl font-semibold mb-2">Customer Satisfaction</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  Customer Satisfaction
+                </h3>
                 <p className="text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper dolor lacus, nec ornare velit cursus sed.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  semper dolor lacus, nec ornare velit cursus sed.
                 </p>
               </div>
             </div>
@@ -95,20 +105,20 @@ const GoalsSection = () => {
           <motion.div
             className="bg-white text-black rounded-xl p-6 shadow-md w-[300px] h-[200px] flex items-center"
             whileHover={{
-              backgroundColor: '#16a34a', // bg-green-600
-              color: '#ffffff', // text-white
+              backgroundColor: "#16a34a", // bg-green-600
+              color: "#ffffff", // text-white
               scale: 1.1, // hover:scale-110
               x: -6, // hover:-translate-x-6 (leftward lift)
-              boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)', // Enhanced shadow
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
             }}
             whileTap={{
-              backgroundColor: '#16a34a', // bg-green-600
-              color: '#ffffff', // text-white
+              backgroundColor: "#16a34a", // bg-green-600
+              color: "#ffffff", // text-white
               scale: 1.1, // tap:scale-110
               x: -6, // tap:-translate-x-6 (leftward lift)
-              boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)', // Enhanced shadow
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
             }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
           >
             <div className="flex items-start">
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mr-4">
@@ -119,9 +129,12 @@ const GoalsSection = () => {
                 />
               </div>
               <div className="text-left">
-                <h3 className="text-xl font-semibold mb-2">Quality and Freshness</h3>
+                <h3 className="text-xl font-semibold mb-2">
+                  Quality and Freshness
+                </h3>
                 <p className="text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper dolor lacus, nec ornare velit cursus sed.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                  semper dolor lacus, nec ornare velit cursus sed.
                 </p>
               </div>
             </div>

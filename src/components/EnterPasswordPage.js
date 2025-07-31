@@ -1,42 +1,42 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { useLocation, useNavigate } from 'react-router-dom';
-import toast from 'react-hot-toast';
-import Typing from './Typing';
-import { useAuth } from '../context/AuthContext';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useLocation, useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
+import Typing from "./Typing";
+import { useAuth } from "../context/AuthContext";
 
 const EnterPasswordPage = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const email = location.state?.email || '';
-  const [password, setPassword] = useState('');
+  const email = location.state?.email || "";
+  const [password, setPassword] = useState("");
   const { login } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!password.trim()) {
-      toast.error('Please enter your password');
+      toast.error("Please enter your password");
       return;
     }
 
     try {
-      const response = await fetch('http://localhost:5000/api/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("http://localhost:5000/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
       });
       const data = await response.json();
 
       if (!response.ok) {
-        toast.error(data.error || 'Invalid email or password');
+        toast.error(data.error || "Invalid email or password");
         return;
       }
 
       login();
-      toast.success('Login successful!');
-      navigate('/account');
+      toast.success("Login successful!");
+      navigate("/account");
     } catch (error) {
-      toast.error('Network error. Please check your connection and try again.');
+      toast.error("Network error. Please check your connection and try again.");
     }
   };
 
@@ -62,7 +62,9 @@ const EnterPasswordPage = () => {
             alt="EasyEats Logo"
             className="h-12 object-contain mb-8 mx-auto"
           />
-          <h2 className="text-3xl font-bold text-gray-800 mb-2">Welcome back!</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-2">
+            Welcome back!
+          </h2>
           <p className="text-gray-600 text-base sm:text-lg mb-8">
             Log back into your EasyEats account.
           </p>
@@ -88,20 +90,31 @@ const EnterPasswordPage = () => {
             </button>
           </form>
           <p className="text-gray-600 text-sm mb-8">
-            Forgot your password?{' '}
-            <a href="/help" className="text-blue-600 underline hover:text-blue-700">
+            Forgot your password?{" "}
+            <a
+              href="/help"
+              className="text-blue-600 underline hover:text-blue-700"
+            >
               Get help
-            </a>.
+            </a>
+            .
           </p>
           <p className="text-gray-600 text-sm mb-8">
-            For further support, you may visit the{' '}
-            <a href="/help" className="text-blue-600 underline hover:text-blue-700">
+            For further support, you may visit the{" "}
+            <a
+              href="/help"
+              className="text-blue-600 underline hover:text-blue-700"
+            >
               Help Center
-            </a>{' '}
-            or contact our{' '}
-            <a href="mailto:support@easyeats.com" className="text-blue-600 underline hover:text-blue-700">
+            </a>{" "}
+            or contact our{" "}
+            <a
+              href="mailto:support@easyeats.com"
+              className="text-blue-600 underline hover:text-blue-700"
+            >
               customer service team
-            </a>.
+            </a>
+            .
           </p>
           <img
             src="/images/logo.png"

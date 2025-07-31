@@ -1,10 +1,10 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useCart } from '../context/CartContext';
-import Header from './Header';
-import { Trash2, Plus, Minus } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
+import React from "react";
+import { motion } from "framer-motion";
+import { useCart } from "../context/CartContext";
+import Header from "./Header";
+import { Trash2, Plus, Minus } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 const CartPage = () => {
   const { cartItems, removeFromCart, updateQuantity, subtotal } = useCart();
@@ -13,9 +13,9 @@ const CartPage = () => {
 
   const handleCheckout = () => {
     if (isAuthenticated) {
-      navigate('/checkout'); // ✅ Go to checkout if logged in
+      navigate("/checkout"); // ✅ Go to checkout if logged in
     } else {
-      navigate('/login'); // ✅ Redirect to login page if not logged in
+      navigate("/login"); // ✅ Redirect to login page if not logged in
     }
   };
 
@@ -36,7 +36,9 @@ const CartPage = () => {
           </h2>
 
           {cartItems.length === 0 ? (
-            <p className="text-gray-600 text-center text-lg">Your cart is empty.</p>
+            <p className="text-gray-600 text-center text-lg">
+              Your cart is empty.
+            </p>
           ) : (
             <div className="space-y-6">
               {/* ✅ Cart Items */}
@@ -53,12 +55,16 @@ const CartPage = () => {
                       src={item.image}
                       alt={item.name}
                       className="w-full h-full object-cover"
-                      onError={(e) => (e.target.src = '/images/fallback.jpg')}
+                      onError={(e) => (e.target.src = "/images/fallback.jpg")}
                     />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-gray-800">{item.name}</h3>
-                    <p className="text-gray-600">₦{item.price.toFixed(2)} x {item.quantity}</p>
+                    <h3 className="text-xl font-semibold text-gray-800">
+                      {item.name}
+                    </h3>
+                    <p className="text-gray-600">
+                      ₦{item.price.toFixed(2)} x {item.quantity}
+                    </p>
                     <p className="text-lg font-medium text-gray-800">
                       Total: ₦{(item.price * item.quantity).toFixed(2)}
                     </p>

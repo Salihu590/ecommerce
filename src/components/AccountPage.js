@@ -1,42 +1,38 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import Header from './Header';
-import Footer from './Footer';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const AccountPage = () => {
-  
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [address, setAddress] = useState('');
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
 
-  
   const [orders, setOrders] = useState([]);
 
-  
   useEffect(() => {
-    const savedProfile = JSON.parse(localStorage.getItem('userProfile')) || {};
-    setEmail(savedProfile.email || '');
-    setPhone(savedProfile.phone || '');
-    setAddress(savedProfile.address || '');
+    const savedProfile = JSON.parse(localStorage.getItem("userProfile")) || {};
+    setEmail(savedProfile.email || "");
+    setPhone(savedProfile.phone || "");
+    setAddress(savedProfile.address || "");
 
-    const savedOrders = JSON.parse(localStorage.getItem('orders')) || [];
+    const savedOrders = JSON.parse(localStorage.getItem("orders")) || [];
     setOrders(savedOrders);
   }, []);
 
-  
   const handleSaveProfile = () => {
     const profile = { email, phone, address };
-    localStorage.setItem('userProfile', JSON.stringify(profile));
-    alert('Profile updated successfully!');
+    localStorage.setItem("userProfile", JSON.stringify(profile));
+    alert("Profile updated successfully!");
   };
 
   // ✅ Cancel Order (only if status = "Processing")
   const handleCancelOrder = (orderId) => {
-    const updatedOrders = orders.map(order =>
-      order.id === orderId ? { ...order, status: 'Cancelled' } : order
+    const updatedOrders = orders.map((order) =>
+      order.id === orderId ? { ...order, status: "Cancelled" } : order
     );
     setOrders(updatedOrders);
-    localStorage.setItem('orders', JSON.stringify(updatedOrders));
+    localStorage.setItem("orders", JSON.stringify(updatedOrders));
   };
 
   return (
@@ -55,7 +51,9 @@ const AccountPage = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">My Account</h2>
+        <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
+          My Account
+        </h2>
 
         {/* ✅ Profile Section */}
         <div className="bg-white rounded-xl shadow-md p-6 mb-8 w-full">
@@ -122,15 +120,19 @@ const AccountPage = () => {
                   <div>
                     <p className="font-semibold">Order ID: {order.id}</p>
                     <p className="text-gray-600 text-sm">Date: {order.date}</p>
-                    <p className="text-gray-600 text-sm">Items: {order.items.join(', ')}</p>
-                    <p className="text-gray-600 text-sm">Total: ₦{order.total}</p>
+                    <p className="text-gray-600 text-sm">
+                      Items: {order.items.join(", ")}
+                    </p>
+                    <p className="text-gray-600 text-sm">
+                      Total: ₦{order.total}
+                    </p>
                     <p
                       className={`font-semibold ${
-                        order.status === 'Cancelled'
-                          ? 'text-red-500'
-                          : order.status === 'Delivered'
-                          ? 'text-green-600'
-                          : 'text-yellow-600'
+                        order.status === "Cancelled"
+                          ? "text-red-500"
+                          : order.status === "Delivered"
+                          ? "text-green-600"
+                          : "text-yellow-600"
                       }`}
                     >
                       Status: {order.status}
@@ -138,7 +140,7 @@ const AccountPage = () => {
                   </div>
 
                   {/* Cancel button only if status = Processing */}
-                  {order.status === 'Processing' && (
+                  {order.status === "Processing" && (
                     <button
                       onClick={() => handleCancelOrder(order.id)}
                       className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600"

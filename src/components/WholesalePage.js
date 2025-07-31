@@ -1,12 +1,12 @@
-import React from 'react';
-import { RefreshCcw } from 'lucide-react';
-import { motion } from 'framer-motion';
-import BulkServicesSection from './BulkServicesSection';
-import FeaturedServicesSection from './FeaturedServicesSection';
-import GoalsSection from './GoalsSection';
-import SpecialOffersSection from './SpecialOffersSection';
-import ClientTestimonials from './ClientTestimonials';
-import Footer from './Footer';
+import React from "react";
+import { RefreshCcw } from "lucide-react";
+import { motion } from "framer-motion";
+import BulkServicesSection from "./BulkServicesSection";
+import FeaturedServicesSection from "./FeaturedServicesSection";
+import GoalsSection from "./GoalsSection";
+import SpecialOffersSection from "./SpecialOffersSection";
+import ClientTestimonials from "./ClientTestimonials";
+import Footer from "./Footer";
 
 const WholesalePage = () => {
   return (
@@ -27,7 +27,10 @@ const WholesalePage = () => {
 
             {/* Description Paragraph */}
             <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-full md:max-w-xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper dolor lacus, nec ornare velit cursus sed. Cras in molestie elit. Sed purus orci, sodales non metus vel, cursus bibendum turpis. Nam sit amet congue orci.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              semper dolor lacus, nec ornare velit cursus sed. Cras in molestie
+              elit. Sed purus orci, sodales non metus vel, cursus bibendum
+              turpis. Nam sit amet congue orci.
             </p>
 
             {/* Mission and Vision Section */}
@@ -36,20 +39,20 @@ const WholesalePage = () => {
               <motion.div
                 className="bg-white text-black rounded-xl shadow-lg p-6 space-y-3 w-[268px] h-[295px]"
                 whileHover={{
-                  backgroundColor: '#16a34a', // bg-green-600
-                  color: '#ffffff', // text-white for all card text
+                  backgroundColor: "#16a34a", // bg-green-600
+                  color: "#ffffff", // text-white for all card text
                   scale: 1.1, // hover:scale-110
                   x: -6, // hover:-translate-x-6 (leftward lift)
-                  boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)', // Enhanced shadow
+                  boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
                 }}
                 whileTap={{
-                  backgroundColor: '#16a34a', // bg-green-600
-                  color: '#ffffff', // text-white for all card text
+                  backgroundColor: "#16a34a", // bg-green-600
+                  color: "#ffffff", // text-white for all card text
                   scale: 1.1, // tap:scale-110
                   x: -6, // tap:-translate-x-6 (leftward lift)
-                  boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)', // Enhanced shadow
+                  boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
                 }}
-                transition={{ duration: 0.3, ease: 'easeOut' }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
               >
                 <div className="w-10 h-10 flex items-center justify-center">
                   <img
@@ -59,10 +62,17 @@ const WholesalePage = () => {
                   />
                 </div>
                 <h3 className="text-xl font-bold">
-                  Our <motion.span className="text-black" whileHover={{ color: '#ffffff' }}>Mission</motion.span>
+                  Our{" "}
+                  <motion.span
+                    className="text-black"
+                    whileHover={{ color: "#ffffff" }}
+                  >
+                    Mission
+                  </motion.span>
                 </h3>
                 <p className="text-sm leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus hendrerit suscipit egestas nunc eget.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vivamus hendrerit suscipit egestas nunc eget.
                 </p>
               </motion.div>
 
@@ -70,29 +80,36 @@ const WholesalePage = () => {
               <motion.div
                 className="bg-white text-black rounded-xl shadow-lg p-6 space-y-3 w-[268px] h-[295px]"
                 whileHover={{
-                  backgroundColor: '#16a34a', // bg-green-600
-                  color: '#ffffff', // text-white for all card text
+                  backgroundColor: "#16a34a", // bg-green-600
+                  color: "#ffffff", // text-white for all card text
                   scale: 1.1, // hover:scale-110
                   x: -6, // hover:-translate-x-6 (leftward lift)
-                  boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)', // Enhanced shadow
+                  boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
                 }}
                 whileTap={{
-                  backgroundColor: '#16a34a', // bg-green-600
-                  color: '#ffffff', // text-white for all card text
+                  backgroundColor: "#16a34a", // bg-green-600
+                  color: "#ffffff", // text-white for all card text
                   scale: 1.1, // tap:scale-110
                   x: -6, // tap:-translate-x-6 (leftward lift)
-                  boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)', // Enhanced shadow
+                  boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
                 }}
-                transition={{ duration: 0.3, ease: 'easeOut' }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
               >
                 <div className="text-green-700">
                   <RefreshCcw className="w-8 h-8" />
                 </div>
                 <h3 className="text-xl font-bold">
-                  Our <motion.span className="text-black" whileHover={{ color: '#ffffff' }}>Vision</motion.span>
+                  Our{" "}
+                  <motion.span
+                    className="text-black"
+                    whileHover={{ color: "#ffffff" }}
+                  >
+                    Vision
+                  </motion.span>
                 </h3>
                 <p className="text-sm leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus hendrerit suscipit egestas nunc eget.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Vivamus hendrerit suscipit egestas nunc eget.
                 </p>
               </motion.div>
             </div>
@@ -129,7 +146,9 @@ const WholesalePage = () => {
                     alt="Customer 3"
                   />
                 </div>
-                <span className="text-xl md:text-2xl font-bold text-green-900">50K+</span>
+                <span className="text-xl md:text-2xl font-bold text-green-900">
+                  50K+
+                </span>
               </div>
             </div>
           </div>

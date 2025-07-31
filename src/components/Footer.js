@@ -1,6 +1,6 @@
 // Footer.js
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
@@ -10,9 +10,11 @@ const Footer = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      style={{ minHeight: '300px' }} // Added minimum height to ensure coverage
+      style={{ minHeight: "300px" }} // Added minimum height to ensure coverage
     >
-      <div className="container mx-auto flex flex-col items-center space-y-10"> {/* Increased space-y for more height */}
+      <div className="container mx-auto flex flex-col items-center space-y-10">
+        {" "}
+        {/* Increased space-y for more height */}
         {/* Newsletter Section */}
         <motion.div
           className="flex items-center"
@@ -34,7 +36,6 @@ const Footer = () => {
             </div>
           </div>
         </motion.div>
-
         {/* Logo and Navigation */}
         <motion.div
           className="flex flex-col items-center space-y-4"
@@ -44,14 +45,23 @@ const Footer = () => {
         >
           <img src="/images/logo1.png" alt="EasyEats Logo" className="h-8" />
           <nav className="flex space-x-6 text-sm">
-            <a href="#" className="hover:text-gray-300">Home</a>
-            <a href="#" className="hover:text-gray-300">About Us</a>
-            <a href="#" className="hover:text-gray-300">Service</a>
-            <a href="#" className="hover:text-gray-300">Testimonial</a>
-            <a href="#" className="hover:text-gray-300">Contact Us</a>
+            <a href="#" className="hover:text-gray-300">
+              Home
+            </a>
+            <a href="#" className="hover:text-gray-300">
+              About Us
+            </a>
+            <a href="#" className="hover:text-gray-300">
+              Service
+            </a>
+            <a href="#" className="hover:text-gray-300">
+              Testimonial
+            </a>
+            <a href="#" className="hover:text-gray-300">
+              Contact Us
+            </a>
           </nav>
         </motion.div>
-
         {/* Social Media and Contact */}
         <motion.div
           className="flex items-center space-x-4 text-sm"
@@ -65,17 +75,49 @@ const Footer = () => {
           <span>|</span>
           <span>+0123456789</span>
           <div className="flex space-x-2 ml-4">
-            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-              <img src="/images/youtube.png" alt="YouTube" className="h-5 cursor-pointer" />
+            <a
+              href="https://www.youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/images/youtube.png"
+                alt="YouTube"
+                className="h-5 cursor-pointer"
+              />
             </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-              <img src="/images/twitter.png" alt="Twitter" className="h-5 cursor-pointer" />
+            <a
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/images/twitter.png"
+                alt="Twitter"
+                className="h-5 cursor-pointer"
+              />
             </a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-              <img src="/images/instagram.png" alt="Instagram" className="h-5 cursor-pointer" />
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/images/instagram.png"
+                alt="Instagram"
+                className="h-5 cursor-pointer"
+              />
             </a>
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-              <img src="/images/facebook.png" alt="Facebook" className="h-5 cursor-pointer" />
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/images/facebook.png"
+                alt="Facebook"
+                className="h-5 cursor-pointer"
+              />
             </a>
           </div>
         </motion.div>

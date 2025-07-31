@@ -1,67 +1,64 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import Header from './Header';
-import { useAuth } from '../context/AuthContext';
-import { useCart } from '../context/CartContext';
-import toast from 'react-hot-toast';
-import { PaystackButton } from 'react-paystack';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import Header from "./Header";
+import { useAuth } from "../context/AuthContext";
+import { useCart } from "../context/CartContext";
+import toast from "react-hot-toast";
+import { PaystackButton } from "react-paystack";
 
 const CheckoutPage = () => {
   const navigate = useNavigate();
-  const { isAuthenticated, user } = useAuth(); 
+  const { isAuthenticated, user } = useAuth();
   const { cartItems, subtotal, clearCart } = useCart();
 
-  const [fullName, setFullName] = useState('');
-  const [address, setAddress] = useState('');
-  const [deliveryOption, setDeliveryOption] = useState('Door Delivery');
-  const [paymentMethod, setPaymentMethod] = useState('Cash on Delivery');
+  const [fullName, setFullName] = useState("");
+  const [address, setAddress] = useState("");
+  const [deliveryOption, setDeliveryOption] = useState("Door Delivery");
+  const [paymentMethod, setPaymentMethod] = useState("Cash on Delivery");
 
   useEffect(() => {
     if (!isAuthenticated) {
-      navigate('/login');
+      navigate("/login");
     }
   }, [isAuthenticated, navigate]);
 
-  const deliveryFee = deliveryOption === 'Door Delivery' ? cartItems.length * 500 : 0;
+  const deliveryFee =
+    deliveryOption === "Door Delivery" ? cartItems.length * 500 : 0;
   const grandTotal = subtotal + deliveryFee;
 
-  
-  const saveOrder = (status = 'Processing') => {
+  const saveOrder = (status = "Processing") => {
     const newOrder = {
-      id: 'ORD' + Date.now(),
+      id: "ORD" + Date.now(),
       date: new Date().toLocaleDateString(),
       items: cartItems.map((item) => item.name),
       total: grandTotal,
       status,
-      progress: ['Processing'],
-      email: user?.email || '', 
+      progress: ["Processing"],
+      email: user?.email || "",
     };
 
-    const existingOrders = JSON.parse(localStorage.getItem('orders')) || [];
+    const existingOrders = JSON.parse(localStorage.getItem("orders")) || [];
     existingOrders.push(newOrder);
-    localStorage.setItem('orders', JSON.stringify(existingOrders));
+    localStorage.setItem("orders", JSON.stringify(existingOrders));
   };
 
-  
   const handlePlaceOrder = () => {
     if (!fullName || !address) {
-      toast.error('Please fill in all required fields');
+      toast.error("Please fill in all required fields");
       return;
     }
 
-    saveOrder('Pending');
+    saveOrder("Pending");
     clearCart();
-    toast.success('Order placed successfully!');
+    toast.success("Order placed successfully!");
 
-    
-    navigate('/payment-success');
+    navigate("/payment-success");
   };
 
-  
-  const publicKey = 'pk_test_3d5fa0db7091d8d24191c48291b4c865275aaf6e'; 
-  const amount = grandTotal * 100; 
-  const email = user?.email || 'test@example.com';
+  const publicKey = "pk_test_3d5fa0db7091d8d24191c48291b4c865275aaf6e";
+  const amount = grandTotal * 100;
+  const email = user?.email || "test@example.com";
 
   const paystackConfig = {
     email,
@@ -70,24 +67,24 @@ const CheckoutPage = () => {
     metadata: {
       custom_fields: [
         {
-          display_name: 'Full Name',
-          variable_name: 'full_name',
+          display_name: "Full Name",
+          variable_name: "full_name",
           value: fullName,
         },
         {
-          display_name: 'Delivery Address',
-          variable_name: 'address',
+          display_name: "Delivery Address",
+          variable_name: "address",
           value: address,
         },
       ],
     },
-    text: 'Place Order', 
+    text: "Place Order",
     onSuccess: () => {
-      saveOrder('Processing');
+      saveOrder("Processing");
       clearCart();
-      navigate('/payment-success');
+      navigate("/payment-success");
     },
-    onClose: () => toast('Payment window closed'),
+    onClose: () => toast("Payment window closed"),
   };
 
   return (
@@ -105,7 +102,9 @@ const CheckoutPage = () => {
         <div className="space-y-6">
           {/* Full Name */}
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <label className="block text-lg font-semibold mb-2">Full Name</label>
+            <label className="block text-lg font-semibold mb-2">
+              Full Name
+            </label>
             <input
               type="text"
               value={fullName}
@@ -117,7 +116,9 @@ const CheckoutPage = () => {
 
           {/* Shipping Address */}
           <div className="bg-white p-6 rounded-xl shadow-md">
-            <label className="block text-lg font-semibold mb-2">Shipping Address</label>
+            <label className="block text-lg font-semibold mb-2">
+              Shipping Address
+            </label>
             <input
               type="text"
               value={address}
@@ -133,21 +134,21 @@ const CheckoutPage = () => {
             <div className="flex gap-4">
               <button
                 className={`px-4 py-2 rounded-full border ${
-                  deliveryOption === 'Door Delivery'
-                    ? 'bg-green-500 text-white'
-                    : 'bg-white text-gray-700'
+                  deliveryOption === "Door Delivery"
+                    ? "bg-green-500 text-white"
+                    : "bg-white text-gray-700"
                 }`}
-                onClick={() => setDeliveryOption('Door Delivery')}
+                onClick={() => setDeliveryOption("Door Delivery")}
               >
                 Door Delivery
               </button>
               <button
                 className={`px-4 py-2 rounded-full border ${
-                  deliveryOption === 'Pick-up Station'
-                    ? 'bg-green-500 text-white'
-                    : 'bg-white text-gray-700'
+                  deliveryOption === "Pick-up Station"
+                    ? "bg-green-500 text-white"
+                    : "bg-white text-gray-700"
                 }`}
-                onClick={() => setDeliveryOption('Pick-up Station')}
+                onClick={() => setDeliveryOption("Pick-up Station")}
               >
                 Pick-up Station
               </button>
@@ -188,16 +189,16 @@ const CheckoutPage = () => {
               <label className="flex items-center gap-3">
                 <input
                   type="radio"
-                  checked={paymentMethod === 'Cash on Delivery'}
-                  onChange={() => setPaymentMethod('Cash on Delivery')}
+                  checked={paymentMethod === "Cash on Delivery"}
+                  onChange={() => setPaymentMethod("Cash on Delivery")}
                 />
                 Cash on Delivery
               </label>
               <label className="flex items-center gap-3">
                 <input
                   type="radio"
-                  checked={paymentMethod === 'Card/Bank/USSD'}
-                  onChange={() => setPaymentMethod('Card/Bank/USSD')}
+                  checked={paymentMethod === "Card/Bank/USSD"}
+                  onChange={() => setPaymentMethod("Card/Bank/USSD")}
                 />
                 Pay with Cards, Bank Transfer or USSD
               </label>
@@ -205,7 +206,7 @@ const CheckoutPage = () => {
           </div>
 
           {/* Button */}
-          {paymentMethod === 'Cash on Delivery' ? (
+          {paymentMethod === "Cash on Delivery" ? (
             <button
               onClick={handlePlaceOrder}
               className="w-full bg-green-500 text-white py-3 rounded-full font-semibold hover:bg-green-600 transition"

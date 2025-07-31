@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { motion } from 'framer-motion';
-import WholesalePage from './WholesalePage';
-import Header from './Header';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
+import WholesalePage from "./WholesalePage";
+import Header from "./Header";
 
 const HomePage = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -47,10 +47,15 @@ const HomePage = () => {
               With Ease
             </h2>
             <p className="text-gray-700 text-base md:text-lg leading-relaxed max-w-full md:max-w-xl">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper dolor lacus, nec ornare velit cursus sed. Cras in molestie elit. Sed purus orci, sodales non metus vel, cursus bibendum turpis. Nam sit amet congue orci. Sed a ligula in velit porttitor consequat. Duis massa est, elementum id lectus ac, viverra dictum turpis.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              semper dolor lacus, nec ornare velit cursus sed. Cras in molestie
+              elit. Sed purus orci, sodales non metus vel, cursus bibendum
+              turpis. Nam sit amet congue orci. Sed a ligula in velit porttitor
+              consequat. Duis massa est, elementum id lectus ac, viverra dictum
+              turpis.
             </p>
             <motion.button
-              onClick={() => navigate('/shop')}
+              onClick={() => navigate("/shop")}
               className="bg-green-500 hover:bg-green-400 text-white text-base md:text-lg font-semibold px-5 py-2 md:px-6 md:py-3 rounded-full shadow-md transition"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -84,11 +89,18 @@ const HomePage = () => {
               />
               <div className="p-4 sm:p-5 space-y-1 sm:space-y-2">
                 <p className="text-teal-500 font-semibold text-sm">Groceries</p>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-900">Vegetables</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900">
+                  Vegetables
+                </h3>
                 <p className="text-gray-600 text-xs sm:text-sm leading-snug">
                   Fresh and organic veggies delivered directly to your doorstep.
                 </p>
-                <a href="#" className="text-teal-500 text-xs sm:text-sm font-medium inline-block mt-1">Read More...</a>
+                <a
+                  href="#"
+                  className="text-teal-500 text-xs sm:text-sm font-medium inline-block mt-1"
+                >
+                  Read More...
+                </a>
               </div>
             </motion.div>
 
@@ -114,8 +126,12 @@ const HomePage = () => {
                   className="w-full h-32 sm:h-28 object-cover rounded-t-xl"
                 />
                 <div className="p-3 sm:p-4">
-                  <p className="text-teal-500 font-semibold text-sm">Groceries</p>
-                  <h4 className="text-base sm:text-lg font-bold text-gray-900">Fruits</h4>
+                  <p className="text-teal-500 font-semibold text-sm">
+                    Groceries
+                  </p>
+                  <h4 className="text-base sm:text-lg font-bold text-gray-900">
+                    Fruits
+                  </h4>
                 </div>
               </motion.div>
 
@@ -133,8 +149,12 @@ const HomePage = () => {
                   className="w-full h-32 sm:h-28 object-cover rounded-t-xl"
                 />
                 <div className="p-3 sm:p-4">
-                  <p className="text-teal-500 font-semibold text-sm">Groceries</p>
-                  <h4 className="text-base sm:text-lg font-bold text-gray-900">Fruits</h4>
+                  <p className="text-teal-500 font-semibold text-sm">
+                    Groceries
+                  </p>
+                  <h4 className="text-base sm:text-lg font-bold text-gray-900">
+                    Fruits
+                  </h4>
                 </div>
               </motion.div>
             </motion.div>

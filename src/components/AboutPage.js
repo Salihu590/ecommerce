@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import Header from './Header';
-import Footer from './Footer';
-import Typing from './Typing';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import Header from "./Header";
+import Footer from "./Footer";
+import Typing from "./Typing";
 
 const AboutPage = () => {
   const sectionVariants = {
@@ -36,72 +36,77 @@ const AboutPage = () => {
             </span>
           </h2>
           <p className="text-gray-600 text-base sm:text-lg mb-10 max-w-prose">
-            At EasyEats, we’re passionate about delivering fresh, high-quality groceries straight to your door. 
-            Founded with a mission to simplify your shopping experience, we source the best fruits, vegetables, 
-            and pantry staples to ensure convenience without compromising on quality. Our team is dedicated to 
-            sustainability, community support, and making every meal effortless and enjoyable.
+            At EasyEats, we’re passionate about delivering fresh, high-quality
+            groceries straight to your door. Founded with a mission to simplify
+            your shopping experience, we source the best fruits, vegetables, and
+            pantry staples to ensure convenience without compromising on
+            quality. Our team is dedicated to sustainability, community support,
+            and making every meal effortless and enjoyable.
           </p>
           <div className="w-full mb-10">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-6">Our Values</h3>
+            <h3 className="text-2xl font-semibold text-gray-800 mb-6">
+              Our Values
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <motion.div
                 className="bg-white p-6 rounded-xl shadow-sm"
                 whileHover={{
-                  backgroundColor: '#16a34a',
+                  backgroundColor: "#16a34a",
                   scale: 1.1,
                   x: -6,
-                  boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)',
+                  boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
                 }}
                 whileTap={{
-                  backgroundColor: '#16a34a',
+                  backgroundColor: "#16a34a",
                   scale: 1.1,
                   x: -6,
-                  boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)',
+                  boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
                 }}
-                transition={{ duration: 0.3, ease: 'easeOut' }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
               >
                 <motion.h4
                   className="text-black text-xl font-medium mb-3"
-                  whileHover={{ color: '#ffffff' }}
-                  whileTap={{ color: '#ffffff' }}
+                  whileHover={{ color: "#ffffff" }}
+                  whileTap={{ color: "#ffffff" }}
                 >
                   Quality
                 </motion.h4>
                 <motion.p
                   className="text-black text-base"
-                  whileHover={{ color: '#ffffff' }}
-                  whileTap={{ color: '#ffffff' }}
+                  whileHover={{ color: "#ffffff" }}
+                  whileTap={{ color: "#ffffff" }}
                 >
-                  We handpick the freshest produce and premium products for every order.
+                  We handpick the freshest produce and premium products for
+                  every order.
                 </motion.p>
               </motion.div>
               <motion.div
                 className="bg-white p-6 rounded-xl shadow-sm"
                 whileHover={{
-                  backgroundColor: '#16a34a',
+                  backgroundColor: "#16a34a",
                   scale: 1.1,
                   x: -6,
-                  boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)',
+                  boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
                 }}
                 whileTap={{
-                  backgroundColor: '#16a34a',
+                  backgroundColor: "#16a34a",
                   scale: 1.1,
                   x: -6,
-                  boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)',
+                  boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
                 }}
-                transition={{ duration: 0.3, ease: 'easeOut' }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
               >
                 <motion.h4
                   className="text-black text-xl font-medium mb-3"
-                  whileHover={{ color: '#ffffff' }}
-                  whileTap={{ color: '#ffffff' }}
+                  whileHover={{ color: "#ffffff" }}
+                  whileTap={{ color: "#ffffff" }}
                 >
                   Convenience
                 </motion.h4>
                 <motion.p
                   className="text-black text-base"
-                  whileHover={{ color: '#ffffff' }}
-                  whileTap={{ color: '#ffffff' }}
+                  whileHover={{ color: "#ffffff" }}
+                  whileTap={{ color: "#ffffff" }}
                 >
                   Shop anytime, anywhere, with fast and reliable delivery.
                 </motion.p>
@@ -109,30 +114,30 @@ const AboutPage = () => {
               <motion.div
                 className="bg-white p-6 rounded-xl shadow-sm"
                 whileHover={{
-                  backgroundColor: '#16a34a',
+                  backgroundColor: "#16a34a",
                   scale: 1.1,
                   x: -6,
-                  boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)',
+                  boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
                 }}
                 whileTap={{
-                  backgroundColor: '#16a34a',
+                  backgroundColor: "#16a34a",
                   scale: 1.1,
                   x: -6,
-                  boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)',
+                  boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
                 }}
-                transition={{ duration: 0.3, ease: 'easeOut' }}
+                transition={{ duration: 0.3, ease: "easeOut" }}
               >
                 <motion.h4
                   className="text-black text-xl font-medium mb-3"
-                  whileHover={{ color: '#ffffff' }}
-                  whileTap={{ color: '#ffffff' }}
+                  whileHover={{ color: "#ffffff" }}
+                  whileTap={{ color: "#ffffff" }}
                 >
                   Sustainability
                 </motion.h4>
                 <motion.p
                   className="text-black text-base"
-                  whileHover={{ color: '#ffffff' }}
-                  whileTap={{ color: '#ffffff' }}
+                  whileHover={{ color: "#ffffff" }}
+                  whileTap={{ color: "#ffffff" }}
                 >
                   We prioritize eco-friendly practices and local sourcing.
                 </motion.p>

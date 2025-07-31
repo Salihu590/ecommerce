@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const FeaturedServicesSection = () => {
   return (
@@ -19,20 +19,20 @@ const FeaturedServicesSection = () => {
           <motion.div
             className="flex flex-col items-center text-center p-4 bg-gray-50 text-black rounded-xl shadow-sm"
             whileHover={{
-              backgroundColor: '#16a34a', // bg-green-600
-              color: '#ffffff', // text-white
+              backgroundColor: "#16a34a", // bg-green-600
+              color: "#ffffff", // text-white
               scale: 1.1, // hover:scale-110
               x: -6, // hover:-translate-x-6 (leftward lift)
-              boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)', // Enhanced shadow
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
             }}
             whileTap={{
-              backgroundColor: '#16a34a', // bg-green-600
-              color: '#ffffff', // text-white
+              backgroundColor: "#16a34a", // bg-green-600
+              color: "#ffffff", // text-white
               scale: 1.1, // tap:scale-110
               x: -6, // tap:-translate-x-6 (leftward lift)
-              boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)', // Enhanced shadow
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
             }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
           >
             <div className="w-12 h-12 mb-2 bg-white rounded-full flex items-center justify-center">
               <img
@@ -48,20 +48,20 @@ const FeaturedServicesSection = () => {
           <motion.div
             className="flex flex-col items-center text-center p-4 bg-gray-50 text-black rounded-xl shadow-sm"
             whileHover={{
-              backgroundColor: '#16a34a', // bg-green-600
-              color: '#ffffff', // text-white
+              backgroundColor: "#16a34a", // bg-green-600
+              color: "#ffffff", // text-white
               scale: 1.1, // hover:scale-110
               x: -6, // hover:-translate-x-6 (leftward lift)
-              boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)', // Enhanced shadow
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
             }}
             whileTap={{
-              backgroundColor: '#16a34a', // bg-green-600
-              color: '#ffffff', // text-white
+              backgroundColor: "#16a34a", // bg-green-600
+              color: "#ffffff", // text-white
               scale: 1.1, // tap:scale-110
               x: -6, // tap:-translate-x-6 (leftward lift)
-              boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)', // Enhanced shadow
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
             }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
           >
             <div className="w-12 h-12 mb-2 bg-white rounded-full flex items-center justify-center">
               <img
@@ -77,20 +77,20 @@ const FeaturedServicesSection = () => {
           <motion.div
             className="flex flex-col items-center text-center p-4 bg-gray-50 text-black rounded-xl shadow-sm"
             whileHover={{
-              backgroundColor: '#16a34a', // bg-green-600
-              color: '#ffffff', // text-white
+              backgroundColor: "#16a34a", // bg-green-600
+              color: "#ffffff", // text-white
               scale: 1.1, // hover:scale-110
               x: -6, // hover:-translate-x-6 (leftward lift)
-              boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)', // Enhanced shadow
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
             }}
             whileTap={{
-              backgroundColor: '#16a34a', // bg-green-600
-              color: '#ffffff', // text-white
+              backgroundColor: "#16a34a", // bg-green-600
+              color: "#ffffff", // text-white
               scale: 1.1, // tap:scale-110
               x: -6, // tap:-translate-x-6 (leftward lift)
-              boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)', // Enhanced shadow
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
             }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
           >
             <div className="w-12 h-12 mb-2 bg-white rounded-full flex items-center justify-center">
               <img
@@ -106,20 +106,20 @@ const FeaturedServicesSection = () => {
           <motion.div
             className="flex flex-col items-center text-center p-4 bg-gray-50 text-black rounded-xl shadow-sm"
             whileHover={{
-              backgroundColor: '#16a34a', // bg-green-600
-              color: '#ffffff', // text-white
+              backgroundColor: "#16a34a", // bg-green-600
+              color: "#ffffff", // text-white
               scale: 1.1, // hover:scale-110
               x: -6, // hover:-translate-x-6 (leftward lift)
-              boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)', // Enhanced shadow
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
             }}
             whileTap={{
-              backgroundColor: '#16a34a', // bg-green-600
-              color: '#ffffff', // text-white
+              backgroundColor: "#16a34a", // bg-green-600
+              color: "#ffffff", // text-white
               scale: 1.1, // tap:scale-110
               x: -6, // tap:-translate-x-6 (leftward lift)
-              boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)', // Enhanced shadow
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
             }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
           >
             <div className="w-12 h-12 mb-2 bg-white rounded-full flex items-center justify-center">
               <img

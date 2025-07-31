@@ -1,26 +1,26 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import toast from 'react-hot-toast';
-import { useCart } from '../context/CartContext'; // Added import
-import Header from './Header';
-import Footer from './Footer';
-import Typing from './Typing';
-import { fruits, vegetables } from '../data/products';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import toast from "react-hot-toast";
+import { useCart } from "../context/CartContext"; // Added import
+import Header from "./Header";
+import Footer from "./Footer";
+import Typing from "./Typing";
+import { fruits, vegetables } from "../data/products";
 
 const FruitsVegetablesPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [isLoggedIn] = useState(false);
   const { addToCart } = useCart(); // Use cart context
 
   const allProducts = [
-    ...fruits.map(p => ({ ...p, category: 'Fruits' })),
-    ...vegetables.map(p => ({ ...p, category: 'Vegetables' })),
+    ...fruits.map((p) => ({ ...p, category: "Fruits" })),
+    ...vegetables.map((p) => ({ ...p, category: "Vegetables" })),
   ];
 
   const filteredProducts =
-    selectedCategory === 'All'
+    selectedCategory === "All"
       ? allProducts
-      : allProducts.filter(p => p.category === selectedCategory);
+      : allProducts.filter((p) => p.category === selectedCategory);
 
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -37,7 +37,6 @@ const FruitsVegetablesPage = () => {
       <div className="min-h-screen bg-blue-100">
         {/* HEADER */}
         <Header isLoggedIn={isLoggedIn} /> {/* Removed cartItems prop */}
-
         {/* PAGE TITLE */}
         <motion.div
           className="px-6 py-8 text-left"
@@ -46,7 +45,9 @@ const FruitsVegetablesPage = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl font-bold flex items-center gap-2">
-            <span className="text-white bg-black px-3 py-1 rounded">Fruits</span>
+            <span className="text-white bg-black px-3 py-1 rounded">
+              Fruits
+            </span>
             <span className="text-green-300">
               <Typing text="& Vegetables" />
             </span>
@@ -54,14 +55,14 @@ const FruitsVegetablesPage = () => {
 
           {/* FILTER BUTTONS */}
           <div className="mt-6 flex flex-wrap gap-3">
-            {['All', 'Fruits', 'Vegetables'].map(cat => (
+            {["All", "Fruits", "Vegetables"].map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition ${
                   selectedCategory === cat
-                    ? 'bg-green-500 text-white'
-                    : 'bg-white border border-green-400 text-green-600 hover:bg-green-100'
+                    ? "bg-green-500 text-white"
+                    : "bg-white border border-green-400 text-green-600 hover:bg-green-100"
                 }`}
               >
                 {cat}
@@ -69,7 +70,6 @@ const FruitsVegetablesPage = () => {
             ))}
           </div>
         </motion.div>
-
         {/* PRODUCTS GRID */}
         <motion.div
           className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-6 pb-10"
@@ -78,7 +78,7 @@ const FruitsVegetablesPage = () => {
           transition={{ duration: 0.8, staggerChildren: 0.1 }}
         >
           {filteredProducts.length > 0 ? (
-            filteredProducts.map(product => (
+            filteredProducts.map((product) => (
               <motion.div
                 key={product.id}
                 variants={sectionVariants}
@@ -90,11 +90,15 @@ const FruitsVegetablesPage = () => {
                     src={product.image}
                     alt={product.name}
                     className="w-full h-full object-cover"
-                    onError={(e) => (e.target.src = '/images/fallback.jpg')}
+                    onError={(e) => (e.target.src = "/images/fallback.jpg")}
                   />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">{product.name}</h3>
-                <p className="text-gray-600 text-lg mb-4">₦{product.price.toFixed(2)}</p>
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">
+                  {product.name}
+                </h3>
+                <p className="text-gray-600 text-lg mb-4">
+                  ₦{product.price.toFixed(2)}
+                </p>
                 <button
                   onClick={() => addToCart(product)}
                   className="bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600 transition-colors w-full font-medium"
@@ -109,7 +113,6 @@ const FruitsVegetablesPage = () => {
             </p>
           )}
         </motion.div>
-
         {/* FOOTER */}
         <Footer />
       </div>

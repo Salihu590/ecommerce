@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
-const Typing = ({ text = 'All', speed = 150 }) => {
-  const [displayText, setDisplayText] = useState('');
+const Typing = ({ text = "All", speed = 150 }) => {
+  const [displayText, setDisplayText] = useState("");
 
   useEffect(() => {
     let i = 0;
