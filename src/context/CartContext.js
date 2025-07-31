@@ -1,5 +1,5 @@
-import React, { createContext, useContext, useState } from 'react';
-import toast from 'react-hot-toast';
+import React, { createContext, useContext, useState } from "react";
+import toast from "react-hot-toast";
 
 const CartContext = createContext();
 
@@ -12,7 +12,9 @@ export const CartProvider = ({ children }) => {
       const existingItem = prevItems.find((item) => item.id === product.id);
       if (existingItem) {
         return prevItems.map((item) =>
-          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
         );
       }
       return [...prevItems, { ...product, quantity: 1 }];
@@ -23,7 +25,7 @@ export const CartProvider = ({ children }) => {
   // Remove item from cart
   const removeFromCart = (id) => {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
-    toast.success('Item removed from cart');
+    toast.success("Item removed from cart");
   };
 
   // Update quantity
@@ -40,8 +42,8 @@ export const CartProvider = ({ children }) => {
   // ✅ Clear entire cart
   const clearCart = () => {
     setCartItems([]);
-    localStorage.removeItem('cartItems'); // optional if you're storing cart in localStorage
-    toast.success('Cart cleared');
+    localStorage.removeItem("cartItems"); // optional if you're storing cart in localStorage
+    toast.success("Cart cleared");
   };
 
   // Calculate total items for nav bar
@@ -62,7 +64,7 @@ export const CartProvider = ({ children }) => {
         updateQuantity,
         clearCart, // ✅ added here
         totalItems,
-        subtotal
+        subtotal,
       }}
     >
       {children}

@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect } from "react";
 
 const AuthContext = createContext();
 
@@ -6,10 +6,10 @@ export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
-    const storedAuth = localStorage.getItem('isAuthenticated');
-    const loginTimestamp = localStorage.getItem('loginTimestamp');
+    const storedAuth = localStorage.getItem("isAuthenticated");
+    const loginTimestamp = localStorage.getItem("loginTimestamp");
 
-    if (storedAuth === 'true' && loginTimestamp) {
+    if (storedAuth === "true" && loginTimestamp) {
       const timeElapsed = Date.now() - parseInt(loginTimestamp);
       const thirtyMinutes = 30 * 60 * 1000;
 
@@ -18,14 +18,14 @@ export const AuthProvider = ({ children }) => {
         const remainingTime = thirtyMinutes - timeElapsed;
         const timeout = setTimeout(() => {
           setIsAuthenticated(false);
-          localStorage.removeItem('isAuthenticated');
-          localStorage.removeItem('loginTimestamp');
+          localStorage.removeItem("isAuthenticated");
+          localStorage.removeItem("loginTimestamp");
         }, remainingTime);
 
         return () => clearTimeout(timeout);
       } else {
-        localStorage.removeItem('isAuthenticated');
-        localStorage.removeItem('loginTimestamp');
+        localStorage.removeItem("isAuthenticated");
+        localStorage.removeItem("loginTimestamp");
         setIsAuthenticated(false);
       }
     }
@@ -33,14 +33,14 @@ export const AuthProvider = ({ children }) => {
 
   const login = () => {
     setIsAuthenticated(true);
-    localStorage.setItem('isAuthenticated', 'true');
-    localStorage.setItem('loginTimestamp', Date.now().toString());
+    localStorage.setItem("isAuthenticated", "true");
+    localStorage.setItem("loginTimestamp", Date.now().toString());
   };
 
   const logout = () => {
     setIsAuthenticated(false);
-    localStorage.removeItem('isAuthenticated');
-    localStorage.removeItem('loginTimestamp');
+    localStorage.removeItem("isAuthenticated");
+    localStorage.removeItem("loginTimestamp");
   };
 
   return (
