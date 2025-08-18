@@ -13,9 +13,9 @@ const CartPage = () => {
 
   const handleCheckout = () => {
     if (isAuthenticated) {
-      navigate("/checkout"); // ✅ Go to checkout if logged in
+      navigate("/checkout");
     } else {
-      navigate("/login"); // ✅ Redirect to login page if not logged in
+      navigate("/login");
     }
   };
 
@@ -41,7 +41,6 @@ const CartPage = () => {
             </p>
           ) : (
             <div className="space-y-6">
-              {/* ✅ Cart Items */}
               {cartItems.map((item) => (
                 <motion.div
                   key={item.id}
@@ -94,7 +93,6 @@ const CartPage = () => {
                 </motion.div>
               ))}
 
-              {/* ✅ Subtotal and Checkout */}
               <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100 flex justify-between items-center">
                 <h3 className="text-xl font-semibold text-gray-800">
                   Subtotal: ₦{subtotal.toFixed(2)}

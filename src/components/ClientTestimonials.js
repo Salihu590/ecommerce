@@ -1,4 +1,3 @@
-// src/components/ClientTestimonials.js
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -7,23 +6,34 @@ const testimonials = [
     id: 1,
     name: "Pat Reinger",
     title: "National Program Producer",
-    image: "/images/pat_reinger.jpg",
+    image: "https://res.cloudinary.com/dsci2gspy/image/upload/v1755532256/user1_xjr1tv.png",
     rating: 5,
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed semper dolor lacus, nec ornare velit cursus sed. Cras in consectetur arcu, et auctor mi. Sed purus orci, sodales non metus vel, cursus bibendum turpis. Nam sit amet congue orci. Sed a ligula in velit porttitor consequat. Duis massa est, elementum id lectus ac, viverra dictum turpis. Pellentesque mollis vestibulum neque vel molestie. Nullam quis lacinia ipsum. Fusce at sapien risus.",
   },
 ];
 
 const satisfiedUsers = [
-  { id: 1, image: "/images/user1.jpg" },
-  { id: 2, image: "/images/user2.jpg" },
-  { id: 3, image: "/images/user3.jpg" },
+  {
+    id: 1,
+    image:
+      "https://res.cloudinary.com/dsci2gspy/image/upload/v1755532256/user1_xjr1tv.png",
+  },
+  {
+    id: 2,
+    image:
+      "https://res.cloudinary.com/dsci2gspy/image/upload/v1755532320/user2_revkpd.png",
+  },
+  {
+    id: 3,
+    image:
+      "https://res.cloudinary.com/dsci2gspy/image/upload/v1755532323/user3_wavxtt.png",
+  },
 ];
 
 const ClientTestimonials = () => {
   return (
     <div className="bg-white py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Background gradient overlays */}
         <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none z-0">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-pink-100 to-white"></div>
           <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-l from-pink-100 to-white"></div>
@@ -32,9 +42,7 @@ const ClientTestimonials = () => {
         </div>
 
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:items-center">
-          {/* LEFT */}
           <div className="relative flex justify-center items-center min-h-[500px]">
-            {/* Background circle */}
             <motion.div
               className="absolute bg-pink-100 rounded-full z-0"
               style={{
@@ -46,9 +54,8 @@ const ClientTestimonials = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
             />
 
-            {/* Delivery Guy Image */}
             <motion.img
-              src="/images/delivery_guy.png"
+              src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755532446/delivery_guy_vfzw7t.png"
               alt="Delivery Guy"
               className="relative z-10 w-full max-w-sm object-contain"
               initial={{ y: 100, opacity: 0 }}
@@ -56,7 +63,6 @@ const ClientTestimonials = () => {
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
             />
 
-            {/* Floating Testimonial Box */}
             <motion.div
               className="absolute bottom-4 lg:bottom-0 translate-y-4 lg:translate-y-12  bg-white p-6 md:p-8 rounded-xl shadow-xl flex flex-col items-center sm:items-start min-w-[280px] sm:min-w-[320px] max-w-[90%] sm:max-w-xs z-20"
               initial={{ x: 100, opacity: 0 }}
@@ -86,7 +92,6 @@ const ClientTestimonials = () => {
             </motion.div>
           </div>
 
-          {/* RIGHT */}
           <div className="text-center lg:text-left">
             <motion.h2
               className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight"
@@ -142,7 +147,6 @@ const ClientTestimonials = () => {
               </motion.div>
             ))}
 
-            {/* Carousel Buttons */}
             <div className="flex justify-center lg:justify-start mt-8 space-x-4">
               <button className="p-3 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors">
                 <svg

@@ -24,7 +24,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import CheckoutPage from "./components/CheckoutPage";
 import PaymentSuccess from "./components/PaymentSuccess";
-import AccountPage from "./components/AccountPage"; // ✅ Added
+import AccountPage from "./components/AccountPage";
 
 const TermsPage = () => (
   <motion.div
@@ -68,7 +68,6 @@ const AnimatedRoutes = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/account" element={<AccountPage />} />{" "}
-        {/* ✅ Real Account Page */}
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/create-account" element={<CreateAccountPage />} />
         <Route path="/enter-password" element={<EnterPasswordPage />} />

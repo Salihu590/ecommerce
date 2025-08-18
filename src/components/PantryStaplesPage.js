@@ -1,15 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import toast from "react-hot-toast";
-import { useCart } from "../context/CartContext"; // Added import
+import { useCart } from "../context/CartContext";
 import Header from "./Header";
 import Footer from "./Footer";
 import Typing from "./Typing";
 import { pantryStaples } from "../data/products";
 
 const PantryStaplesPage = () => {
-  const [isLoggedIn] = React.useState(false); // Explicitly use React.useState
-  const { addToCart } = useCart(); // Use cart context
+  const [isLoggedIn] = React.useState(false);
+  const { addToCart } = useCart();
 
   const allProducts = pantryStaples.map((p) => ({ ...p, category: "Pantry" }));
 
@@ -26,9 +26,8 @@ const PantryStaplesPage = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="min-h-screen bg-blue-100">
-        {/* HEADER */}
-        <Header isLoggedIn={isLoggedIn} /> {/* Removed cartItems prop */}
-        {/* PAGE TITLE */}
+        <Header isLoggedIn={isLoggedIn} />
+
         <motion.div
           className="px-6 py-8 text-left"
           initial={{ opacity: 0, y: 50 }}
@@ -44,7 +43,7 @@ const PantryStaplesPage = () => {
             </span>
           </h2>
         </motion.div>
-        {/* PRODUCTS GRID */}
+
         <motion.div
           className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-6 pb-10"
           initial={{ opacity: 0, y: 50 }}
@@ -87,7 +86,7 @@ const PantryStaplesPage = () => {
             </p>
           )}
         </motion.div>
-        {/* FOOTER */}
+
         <Footer />
       </div>
     </motion.div>

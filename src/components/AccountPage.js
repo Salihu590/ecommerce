@@ -1,163 +1,138 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { useAuth } from "../context/AuthContext";
 import Header from "./Header";
-import Footer from "./Footer";
+import {
+  FaTachometerAlt,
+  FaShoppingCart,
+  FaHeart,
+  FaAddressBook,
+  FaCreditCard,
+  FaUserCog,
+  FaLifeRing,
+  FaSignOutAlt,
+} from "react-icons/fa";
 
-const AccountPage = () => {
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
-
+export default function AccountPage() {
+  const { currentUser, logout } = useAuth();
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    const savedProfile = JSON.parse(localStorage.getItem("userProfile")) || {};
-    setEmail(savedProfile.email || "");
-    setPhone(savedProfile.phone || "");
-    setAddress(savedProfile.address || "");
-
-    const savedOrders = JSON.parse(localStorage.getItem("orders")) || [];
-    setOrders(savedOrders);
+    const fetchOrders = async () => {
+      try {
+        const res = await fetch("http://localhost:5000/api/orders");
+        const data = await res.json();
+        console.log("Fetched orders:", data);
+        setOrders(data);
+      } catch (err) {
+        console.error("Error fetching orders:", err);
+      }
+    };
+    fetchOrders();
   }, []);
 
-  const handleSaveProfile = () => {
-    const profile = { email, phone, address };
-    localStorage.setItem("userProfile", JSON.stringify(profile));
-    alert("Profile updated successfully!");
-  };
-
-  // ✅ Cancel Order (only if status = "Processing")
-  const handleCancelOrder = (orderId) => {
-    const updatedOrders = orders.map((order) =>
-      order.id === orderId ? { ...order, status: "Cancelled" } : order
-    );
-    setOrders(updatedOrders);
-    localStorage.setItem("orders", JSON.stringify(updatedOrders));
-  };
-
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -30 }}
-      transition={{ duration: 0.5 }}
-      className="min-h-screen bg-blue-100 flex flex-col"
-    >
-      <Header isLoggedIn={true} />
-
-      <motion.div
-        className="w-full px-6 py-10"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">
-          My Account
-        </h2>
-
-        {/* ✅ Profile Section */}
-        <div className="bg-white rounded-xl shadow-md p-6 mb-8 w-full">
-          <h3 className="text-xl font-semibold mb-4">Profile Information</h3>
-
-          <div className="space-y-4">
-            {/* Email (Editable) */}
-            <div>
-              <label className="block font-semibold mb-2">Email</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full p-3 border rounded-lg"
-                placeholder="Enter your email"
-              />
-            </div>
-
-            {/* Phone Number */}
-            <div>
-              <label className="block font-semibold mb-2">Phone Number</label>
-              <input
-                type="text"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                className="w-full p-3 border rounded-lg"
-                placeholder="Enter your phone number"
-              />
-            </div>
-
-            {/* Address */}
-            <div>
-              <label className="block font-semibold mb-2">Address</label>
-              <textarea
-                value={address}
-                onChange={(e) => setAddress(e.target.value)}
-                className="w-full p-3 border rounded-lg"
-                placeholder="Enter your address"
-              ></textarea>
-            </div>
-
-            <button
-              onClick={handleSaveProfile}
-              className="bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-600 transition"
+    <>
+      <Header />
+      <div className="flex bg-green-50 min-h-screen p-6">
+        <div className="w-64 bg-white rounded-2xl p-4 shadow">
+          <ul className="space-y-3">
+            <li className="flex items-center gap-2 p-2 rounded-lg hover:bg-green-100 cursor-pointer">
+              <FaTachometerAlt /> Dashboard
+            </li>
+            <li className="flex items-center gap-2 p-2 rounded-lg hover:bg-green-100 cursor-pointer">
+              <FaShoppingCart /> My Cart
+            </li>
+            <li className="flex items-center gap-2 p-2 rounded-lg hover:bg-green-100 cursor-pointer">
+              <FaHeart /> Wishlist
+            </li>
+            <li className="flex items-center gap-2 p-2 rounded-lg hover:bg-green-100 cursor-pointer">
+              <FaAddressBook /> Address Book
+            </li>
+            <li className="flex items-center gap-2 p-2 rounded-lg hover:bg-green-100 cursor-pointer">
+              <FaCreditCard /> Payment Methods
+            </li>
+            <li className="flex items-center gap-2 p-2 rounded-lg hover:bg-green-100 cursor-pointer">
+              <FaUserCog /> Account Settings
+            </li>
+            <li className="flex items-center gap-2 p-2 rounded-lg hover:bg-green-100 cursor-pointer">
+              <FaLifeRing /> Help & Support
+            </li>
+            <li
+              onClick={logout}
+              className="flex items-center gap-2 p-2 rounded-lg hover:bg-green-100 cursor-pointer text-red-600"
             >
-              Save Profile
-            </button>
+              <FaSignOutAlt /> Log Out
+            </li>
+          </ul>
+        </div>
+
+        <div className="flex-1 ml-6">
+          <h1 className="text-3xl font-bold mb-2">
+            Welcome, {currentUser?.name || "User"}!
+          </h1>
+          <p className="text-gray-600 mb-6">
+            Here’s a summary of your recent activity and account information.
+          </p>
+
+          <div className="bg-white rounded-xl p-4 shadow mb-6">
+            <div className="flex justify-between items-center mb-3">
+              <h2 className="font-semibold text-lg">Recent Orders</h2>
+              <button className="text-green-600 hover:underline">
+                View All
+              </button>
+            </div>
+            <table className="w-full text-left">
+              <thead>
+                <tr className="text-gray-500">
+                  <th>Order #</th>
+                  <th>Date</th>
+                  <th>Status</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                {orders.length > 0 ? (
+                  orders.map((order) => (
+                    <tr key={order.id} className="border-t">
+                      <td>#{order.id}</td>
+                      <td>{order.date}</td>
+                      <td
+                        className={
+                          order.status === "Delivered"
+                            ? "text-green-600"
+                            : order.status === "Processing"
+                            ? "text-yellow-500"
+                            : "text-red-500"
+                        }
+                      >
+                        {order.status}
+                      </td>
+                      <td>${order.total}</td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan="4" className="text-center text-gray-500 py-4">
+                      No recent orders
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-green-600 text-white p-4 rounded-xl shadow hover:bg-green-400 cursor-pointer">
+              <h3 className="font-bold">My Cart</h3>
+              <p>3 items</p>
+            </div>
+            <div className="bg-yellow-400 text-white p-4 rounded-xl shadow hover:bg-green-400 cursor-pointer">
+              <h3 className="font-bold">Wishlist</h3>
+              <p>5 items</p>
+            </div>
           </div>
         </div>
-
-        {/* ✅ My Orders Section */}
-        <div className="bg-white rounded-xl shadow-md p-6 w-full">
-          <h3 className="text-xl font-semibold mb-4">My Orders</h3>
-
-          {orders.length === 0 ? (
-            <p className="text-gray-500">You have no orders yet.</p>
-          ) : (
-            <div className="space-y-4">
-              {orders.map((order) => (
-                <div
-                  key={order.id}
-                  className="border rounded-lg p-4 flex justify-between items-center"
-                >
-                  <div>
-                    <p className="font-semibold">Order ID: {order.id}</p>
-                    <p className="text-gray-600 text-sm">Date: {order.date}</p>
-                    <p className="text-gray-600 text-sm">
-                      Items: {order.items.join(", ")}
-                    </p>
-                    <p className="text-gray-600 text-sm">
-                      Total: ₦{order.total}
-                    </p>
-                    <p
-                      className={`font-semibold ${
-                        order.status === "Cancelled"
-                          ? "text-red-500"
-                          : order.status === "Delivered"
-                          ? "text-green-600"
-                          : "text-yellow-600"
-                      }`}
-                    >
-                      Status: {order.status}
-                    </p>
-                  </div>
-
-                  {/* Cancel button only if status = Processing */}
-                  {order.status === "Processing" && (
-                    <button
-                      onClick={() => handleCancelOrder(order.id)}
-                      className="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600"
-                    >
-                      Cancel Order
-                    </button>
-                  )}
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </motion.div>
-
-      <Footer />
-    </motion.div>
+      </div>
+    </>
   );
-};
-
-export default AccountPage;
+}

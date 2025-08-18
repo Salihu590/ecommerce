@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 const SpecialOffersSection = () => {
-  // State for countdown
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 2,
@@ -11,16 +10,13 @@ const SpecialOffersSection = () => {
     seconds: 26,
   });
 
-  // Effect to handle the countdown
   useEffect(() => {
     const timer = setInterval(() => {
       setTimeLeft((prevTime) => {
         let { days, hours, minutes, seconds } = prevTime;
 
-        // Decrease seconds
         seconds -= 1;
 
-        // Update minutes, hours, and days as seconds decrease
         if (seconds < 0) {
           seconds = 59;
           minutes -= 1;
@@ -34,7 +30,6 @@ const SpecialOffersSection = () => {
           days -= 1;
         }
 
-        // If countdown reaches zero, stop the timer
         if (days < 0) {
           clearInterval(timer);
           return { days: 0, hours: 0, minutes: 0, seconds: 0 };
@@ -42,13 +37,12 @@ const SpecialOffersSection = () => {
 
         return { days, hours, minutes, seconds };
       });
-    }, 1000); // Update every second
+    }, 1000);
 
-    // Cleanup interval on component unmount
     return () => clearInterval(timer);
-  }, []); // Empty dependency array means it runs once on mount
+  }, []);
 
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const navigate = useNavigate();
 
   return (
     <motion.section
@@ -75,7 +69,6 @@ const SpecialOffersSection = () => {
         auctor mi.
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-        {/* Card 1 with Countdown Timer */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -109,15 +102,14 @@ const SpecialOffersSection = () => {
               Shop Now
             </button>
           </div>
-          {/* Image */}
+
           <img
-            src="/images/best-deals.jpg"
+            src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755536266/best-deals_fc70bi.jpg"
             alt="Best Deals"
             className="mt-4 h-80 w-full object-cover rounded-lg"
           />
         </motion.div>
 
-        {/* Card 2 */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -140,15 +132,14 @@ const SpecialOffersSection = () => {
               Shop Now
             </button>
           </div>
-          {/* Image */}
+
           <img
-            src="/images/low-fat-meat.jpg"
+            src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755536337/low-fat-meat_s0uspx.jpg"
             alt="Low Fat Meat"
             className="mt-4 h-80 w-full object-cover rounded-lg"
           />
         </motion.div>
 
-        {/* Card 3 */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -171,9 +162,9 @@ const SpecialOffersSection = () => {
               Shop Now
             </button>
           </div>
-          {/* Image */}
+
           <img
-            src="/images/fresh-fruit.jpg"
+            src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755536381/fresh-fruit_pskkaa.jpg"
             alt="Summer Sale"
             className="mt-4 h-80 w-full object-cover rounded-lg"
           />

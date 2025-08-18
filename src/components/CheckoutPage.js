@@ -100,7 +100,6 @@ const CheckoutPage = () => {
         <h2 className="text-4xl font-bold mb-6">Checkout</h2>
 
         <div className="space-y-6">
-          {/* Full Name */}
           <div className="bg-white p-6 rounded-xl shadow-md">
             <label className="block text-lg font-semibold mb-2">
               Full Name
@@ -114,7 +113,6 @@ const CheckoutPage = () => {
             />
           </div>
 
-          {/* Shipping Address */}
           <div className="bg-white p-6 rounded-xl shadow-md">
             <label className="block text-lg font-semibold mb-2">
               Shipping Address
@@ -128,7 +126,6 @@ const CheckoutPage = () => {
             />
           </div>
 
-          {/* Delivery Option */}
           <div className="bg-white p-6 rounded-xl shadow-md">
             <h3 className="text-xl font-semibold mb-4">Delivery Option</h3>
             <div className="flex gap-4">
@@ -155,7 +152,6 @@ const CheckoutPage = () => {
             </div>
           </div>
 
-          {/* Order Summary */}
           <div className="bg-white p-6 rounded-xl shadow-md">
             <h3 className="text-xl font-semibold mb-4">Order Summary</h3>
             {cartItems.map((item) => (
@@ -182,7 +178,6 @@ const CheckoutPage = () => {
             </div>
           </div>
 
-          {/* Payment Method */}
           <div className="bg-white p-6 rounded-xl shadow-md">
             <h3 className="text-xl font-semibold mb-4">Payment Method</h3>
             <div className="space-y-3">
@@ -205,7 +200,6 @@ const CheckoutPage = () => {
             </div>
           </div>
 
-          {/* Button */}
           {paymentMethod === "Cash on Delivery" ? (
             <button
               onClick={handlePlaceOrder}

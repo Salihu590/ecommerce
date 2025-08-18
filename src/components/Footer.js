@@ -1,21 +1,18 @@
-// Footer.js
 import React from "react";
 import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
     <motion.footer
-      className="bg-gray-900 text-white py-20" // Increased padding to extend downwards
+      className="bg-gray-900 text-white py-20"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
-      style={{ minHeight: "300px" }} // Added minimum height to ensure coverage
+      style={{ minHeight: "300px" }}
     >
       <div className="container mx-auto flex flex-col items-center space-y-10">
         {" "}
-        {/* Increased space-y for more height */}
-        {/* Newsletter Section */}
         <motion.div
           className="flex items-center"
           initial={{ opacity: 0 }}
@@ -36,14 +33,17 @@ const Footer = () => {
             </div>
           </div>
         </motion.div>
-        {/* Logo and Navigation */}
         <motion.div
           className="flex flex-col items-center space-y-4"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          <img src="/images/logo1.png" alt="EasyEats Logo" className="h-8" />
+          <img
+            src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755533816/logo1_x9fufs.png"
+            alt="EasyEats Logo"
+            className="h-8"
+          />
           <nav className="flex space-x-6 text-sm">
             <a href="#" className="hover:text-gray-300">
               Home
@@ -62,7 +62,6 @@ const Footer = () => {
             </a>
           </nav>
         </motion.div>
-        {/* Social Media and Contact */}
         <motion.div
           className="flex items-center space-x-4 text-sm"
           initial={{ opacity: 0 }}
@@ -81,7 +80,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <img
-                src="/images/youtube.png"
+                src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755533851/youtube_rmgpt9.png"
                 alt="YouTube"
                 className="h-5 cursor-pointer"
               />
@@ -92,7 +91,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <img
-                src="/images/twitter.png"
+                src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755533878/twitter_txr947.png"
                 alt="Twitter"
                 className="h-5 cursor-pointer"
               />
@@ -103,7 +102,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <img
-                src="/images/instagram.png"
+                src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755533905/instagram_dtz396.png"
                 alt="Instagram"
                 className="h-5 cursor-pointer"
               />
@@ -114,7 +113,7 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <img
-                src="/images/facebook.png"
+                src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755533933/facebook_jgh75c.png"
                 alt="Facebook"
                 className="h-5 cursor-pointer"
               />

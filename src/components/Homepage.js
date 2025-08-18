@@ -18,12 +18,12 @@ const HomePage = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="bg-blue-100 min-h-screen font-sans relative">
-        {/* Header */}
+       
         <Header isLoggedIn={isLoggedIn} cartItems={cartItems} />
 
-        {/* Main Content (Hero Section & Product Cards) */}
+        
         <main className="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-12 px-6 py-6 md:px-12 md:py-10">
-          {/* Left Hero Section */}
+          
           <motion.div
             className="col-span-1 md:col-span-3 space-y-4 md:space-y-6 pr-0 md:pr-4 order-1"
             initial={{ opacity: 0, y: 50 }}
@@ -66,7 +66,7 @@ const HomePage = () => {
             </motion.button>
           </motion.div>
 
-          {/* Right Product Cards Section */}
+          
           <motion.div
             className="col-span-1 md:col-span-2 space-y-6 order-2"
             initial={{ opacity: 0, y: 50 }}
@@ -74,7 +74,7 @@ const HomePage = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: false }}
           >
-            {/* Vegetables Card */}
+            
             <motion.div
               className="bg-white rounded-xl shadow-xl overflow-hidden"
               initial={{ opacity: 0, y: 50 }}
@@ -83,7 +83,7 @@ const HomePage = () => {
               viewport={{ once: false }}
             >
               <img
-                src="/images/main-groceries.png"
+                src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755534330/main-groceries_lgwfn1.jpg"
                 alt="Groceries Vegetables"
                 className="w-full h-48 sm:h-52 object-cover"
               />
@@ -104,7 +104,7 @@ const HomePage = () => {
               </div>
             </motion.div>
 
-            {/* Fruits Cards */}
+            
             <motion.div
               className="flex flex-col sm:flex-row gap-4"
               initial={{ opacity: 0, y: 50 }}
@@ -112,7 +112,7 @@ const HomePage = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
               viewport={{ once: false }}
             >
-              {/* Card 1 */}
+              
               <motion.div
                 className="bg-white rounded-xl shadow-xl flex-1 overflow-hidden"
                 initial={{ opacity: 0, y: 50 }}
@@ -121,7 +121,7 @@ const HomePage = () => {
                 viewport={{ once: false }}
               >
                 <img
-                  src="/images/Fruits-card1.png"
+                  src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755534387/fruits-card1_gabit2.jpg"
                   alt="Fruits 1"
                   className="w-full h-32 sm:h-28 object-cover rounded-t-xl"
                 />
@@ -135,7 +135,7 @@ const HomePage = () => {
                 </div>
               </motion.div>
 
-              {/* Card 2 */}
+              
               <motion.div
                 className="bg-white rounded-xl shadow-xl flex-1 overflow-hidden"
                 initial={{ opacity: 0, y: 50 }}
@@ -144,7 +144,7 @@ const HomePage = () => {
                 viewport={{ once: false }}
               >
                 <img
-                  src="/images/fruits-card2.png"
+                  src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755534417/fruits-card2_rkdtae.jpg"
                   alt="Fruits 2"
                   className="w-full h-32 sm:h-28 object-cover rounded-t-xl"
                 />
@@ -159,7 +159,7 @@ const HomePage = () => {
               </motion.div>
             </motion.div>
 
-            {/* Navigation Arrows */}
+            
             <div className="flex justify-end gap-2 sm:gap-3 pt-0 sm:pt-2 pr-0 sm:pr-2">
               <button className="w-9 h-9 sm:w-10 sm:h-10 bg-green-300 border border-green-400 rounded-full flex items-center justify-center hover:bg-green-400 transition shadow-md">
                 <ChevronLeft className="text-white w-4 h-4 sm:w-5 sm:h-5" />
@@ -171,7 +171,7 @@ const HomePage = () => {
           </motion.div>
         </main>
 
-        {/* Render the WholesalePage component directly below the main content */}
+        
         <WholesalePage />
       </div>
     </motion.div>

@@ -47,7 +47,7 @@ const Header = () => {
       <header className="flex items-center justify-between px-4 sm:px-6 md:px-12 py-4 bg-blue-100 relative z-30">
         <div>
           <img
-            src="/images/logo.png"
+            src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755532651/logo_dzlt0y.png"
             alt="Company Logo"
             className="h-10 md:h-12 object-contain"
           />

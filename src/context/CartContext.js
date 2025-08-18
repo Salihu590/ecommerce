@@ -6,7 +6,7 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState([]);
 
-  // Add item to cart
+  
   const addToCart = (product) => {
     setCartItems((prevItems) => {
       const existingItem = prevItems.find((item) => item.id === product.id);
@@ -22,13 +22,13 @@ export const CartProvider = ({ children }) => {
     toast.success(`${product.name} added to cart`);
   };
 
-  // Remove item from cart
+  
   const removeFromCart = (id) => {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
     toast.success("Item removed from cart");
   };
 
-  // Update quantity
+  
   const updateQuantity = (id, delta) => {
     setCartItems((prevItems) =>
       prevItems.map((item) =>
@@ -39,17 +39,17 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-  // ✅ Clear entire cart
+  
   const clearCart = () => {
     setCartItems([]);
-    localStorage.removeItem("cartItems"); // optional if you're storing cart in localStorage
+    localStorage.removeItem("cartItems"); 
     toast.success("Cart cleared");
   };
 
-  // Calculate total items for nav bar
+  
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
-  // Calculate subtotal
+  
   const subtotal = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
@@ -62,7 +62,7 @@ export const CartProvider = ({ children }) => {
         addToCart,
         removeFromCart,
         updateQuantity,
-        clearCart, // ✅ added here
+        clearCart, 
         totalItems,
         subtotal,
       }}

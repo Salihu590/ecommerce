@@ -5,7 +5,6 @@ const GoalsSection = () => {
   return (
     <section className="bg-[#E0F7FA] py-16 px-4 sm:px-6 lg:px-20 font-sans">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between">
-        {/* Left Column - Title and Description */}
         <div className="text-left lg:w-1/2">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
             <span className="bg-black text-white px-4 py-1 rounded-xl inline-block">
@@ -21,122 +20,109 @@ const GoalsSection = () => {
           </p>
         </div>
 
-        {/* Right Column - Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-1 gap-6 lg:w-1/2">
-          {/* Card 1 - Convenience Accessibility */}
+        <div className="flex flex-col gap-6 lg:w-1/2">
           <motion.div
-            className="bg-white text-black rounded-xl p-6 shadow-md w-[300px] h-[200px] flex items-center"
+            className="relative flex items-center bg-pink-100 text-black rounded-2xl p-6 shadow-md w-full h-auto"
             whileHover={{
-              backgroundColor: "#16a34a", // bg-green-600
-              color: "#ffffff", // text-white
-              scale: 1.1, // hover:scale-110
-              x: -6, // hover:-translate-x-6 (leftward lift)
-              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
+              backgroundColor: "#16a34a",
+              color: "#ffffff",
+              scale: 1.02,
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
             }}
             whileTap={{
-              backgroundColor: "#16a34a", // bg-green-600
-              color: "#ffffff", // text-white
-              scale: 1.1, // tap:scale-110
-              x: -6, // tap:-translate-x-6 (leftward lift)
-              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
+              backgroundColor: "#16a34a",
+              color: "#ffffff",
+              scale: 1.02,
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
             }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
-            <div className="flex items-start">
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mr-4">
-                <img
-                  src="/images/icon1.png"
-                  alt="Convenience Accessibility Icon"
-                  className="w-9 h-9 object-contain"
-                />
-              </div>
-              <div className="text-left">
-                <h3 className="text-xl font-semibold mb-2">
-                  Convenience Accessibility
-                </h3>
-                <p className="text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  semper dolor lacus, nec ornare velit cursus sed.
-                </p>
-              </div>
+            <div className="absolute -left-8 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+              <img
+                src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755533608/icon2_ey3pwr.png"
+                alt="Customer Satisfaction Icon"
+                className="w-8 h-8 object-contain"
+              />
+            </div>
+
+            <div className="pl-12">
+              <h3 className="text-xl font-semibold mb-2">
+                Customer Satisfaction
+              </h3>
+              <p className="text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                semper dolor lacus, nec ornare velit cursus sed.
+              </p>
             </div>
           </motion.div>
 
-          {/* Card 2 - Customer Satisfaction */}
           <motion.div
-            className="bg-white text-black rounded-xl p-6 shadow-md w-[300px] h-[200px] flex items-center"
+            className="relative flex items-center bg-green-600 text-white rounded-2xl p-6 shadow-md w-full h-auto"
             whileHover={{
-              backgroundColor: "#16a34a", // bg-green-600
-              color: "#ffffff", // text-white
-              scale: 1.1, // hover:scale-110
-              x: -6, // hover:-translate-x-6 (leftward lift)
-              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
+              backgroundColor: "#16a34a",
+              color: "#ffffff",
+              scale: 1.02,
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
             }}
             whileTap={{
-              backgroundColor: "#16a34a", // bg-green-600
-              color: "#ffffff", // text-white
-              scale: 1.1, // tap:scale-110
-              x: -6, // tap:-translate-x-6 (leftward lift)
-              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
+              backgroundColor: "#16a34a",
+              color: "#ffffff",
+              scale: 1.02,
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
             }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
-            <div className="flex items-start">
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mr-4">
-                <img
-                  src="/images/icon2.png"
-                  alt="Customer Satisfaction Icon"
-                  className="w-8 h-8 object-contain"
-                />
-              </div>
-              <div className="text-left">
-                <h3 className="text-xl font-semibold mb-2">
-                  Customer Satisfaction
-                </h3>
-                <p className="text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  semper dolor lacus, nec ornare velit cursus sed.
-                </p>
-              </div>
+            <div className="absolute -left-8 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+              <img
+                src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755533409/Icon1_savjvi.png"
+                alt="Convenience Accessibility Icon"
+                className="w-9 h-9 object-contain"
+              />
+            </div>
+
+            <div className="pl-12">
+              <h3 className="text-xl font-semibold mb-2">
+                Convenience Accessibility
+              </h3>
+              <p className="text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                semper dolor lacus, nec ornare velit cursus sed.
+              </p>
             </div>
           </motion.div>
 
-          {/* Card 3 - Quality and Freshness */}
           <motion.div
-            className="bg-white text-black rounded-xl p-6 shadow-md w-[300px] h-[200px] flex items-center"
+            className="relative flex items-center bg-pink-100 text-black rounded-2xl p-6 shadow-md w-full h-auto"
             whileHover={{
-              backgroundColor: "#16a34a", // bg-green-600
-              color: "#ffffff", // text-white
-              scale: 1.1, // hover:scale-110
-              x: -6, // hover:-translate-x-6 (leftward lift)
-              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
+              backgroundColor: "#16a34a",
+              color: "#ffffff",
+              scale: 1.02,
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
             }}
             whileTap={{
-              backgroundColor: "#16a34a", // bg-green-600
-              color: "#ffffff", // text-white
-              scale: 1.1, // tap:scale-110
-              x: -6, // tap:-translate-x-6 (leftward lift)
-              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
+              backgroundColor: "#16a34a",
+              color: "#ffffff",
+              scale: 1.02,
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
             }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
-            <div className="flex items-start">
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mr-4">
-                <img
-                  src="/images/icon3.png"
-                  alt="Quality and Freshness Icon"
-                  className="w-9 h-9 object-contain"
-                />
-              </div>
-              <div className="text-left">
-                <h3 className="text-xl font-semibold mb-2">
-                  Quality and Freshness
-                </h3>
-                <p className="text-sm">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                  semper dolor lacus, nec ornare velit cursus sed.
-                </p>
-              </div>
+            <div className="absolute -left-8 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md">
+              <img
+                src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755533642/icon3_waamca.png"
+                alt="Quality and Freshness Icon"
+                className="w-9 h-9 object-contain"
+              />
+            </div>
+
+            <div className="pl-12">
+              <h3 className="text-xl font-semibold mb-2">
+                Quality and Freshness
+              </h3>
+              <p className="text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                semper dolor lacus, nec ornare velit cursus sed.
+              </p>
             </div>
           </motion.div>
         </div>

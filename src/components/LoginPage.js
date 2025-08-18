@@ -85,7 +85,7 @@ const LoginPage = () => {
           variants={sectionVariants}
         >
           <img
-            src="/images/logo.png"
+            src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755532651/logo_dzlt0y.png"
             alt="EasyEats Logo"
             className="h-12 md:h-16 object-contain mb-8"
           />
@@ -131,7 +131,7 @@ const LoginPage = () => {
               className="w-full bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition-colors font-medium flex items-center justify-center gap-2"
             >
               <img
-                src="/images/facebook-logo.png"
+                src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755534587/facebook-logo_zwurbl.png"
                 alt="Facebook Logo"
                 className="h-5 w-5 object-contain"
               />
@@ -142,7 +142,7 @@ const LoginPage = () => {
               className="w-full bg-white text-gray-800 px-6 py-3 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors font-medium flex items-center justify-center gap-2"
             >
               <img
-                src="/images/google-logo.png"
+                src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755534613/google-logo_n3o0od.png"
                 alt="Google Logo"
                 className="h-5 w-5 object-contain"
               />

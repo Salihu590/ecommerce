@@ -8,7 +8,6 @@ const PaymentSuccess = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Get cart items from localStorage
     const cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
     const subtotal = cartItems.reduce(
       (sum, item) => sum + item.price * item.quantity,
@@ -25,12 +24,10 @@ const PaymentSuccess = () => {
         progress: ["Processing"],
       };
 
-      // Save order in localStorage
       const existingOrders = JSON.parse(localStorage.getItem("orders")) || [];
       existingOrders.push(newOrder);
       localStorage.setItem("orders", JSON.stringify(existingOrders));
 
-      // Clear cart after saving
       localStorage.removeItem("cartItems");
     }
   }, []);

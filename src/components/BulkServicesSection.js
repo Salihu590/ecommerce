@@ -19,22 +19,21 @@ const BulkServicesSection = () => {
           and efficient logistics.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Card 1 */}
           <motion.div
             className="bg-gray-100 text-black rounded-lg p-6 shadow-md w-[234px] h-[304px]"
             whileHover={{
-              backgroundColor: "#16a34a", // bg-green-600
-              color: "#ffffff", // text-white
-              scale: 1.1, // hover:scale-110
-              x: -6, // hover:-translate-x-6 (leftward lift)
-              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
+              backgroundColor: "#16a34a",
+              color: "#ffffff",
+              scale: 1.1,
+              x: -6,
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
             }}
             whileTap={{
-              backgroundColor: "#16a34a", // bg-green-600
-              color: "#ffffff", // text-white
-              scale: 1.1, // tap:scale-110
-              x: -6, // tap:-translate-x-6 (leftward lift)
-              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
+              backgroundColor: "#16a34a",
+              color: "#ffffff",
+              scale: 1.1,
+              x: -6,
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
             }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
@@ -45,22 +44,21 @@ const BulkServicesSection = () => {
             </p>
           </motion.div>
 
-          {/* Card 2 */}
           <motion.div
             className="bg-gray-100 text-black rounded-lg p-6 shadow-md w-[234px] h-[304px]"
             whileHover={{
-              backgroundColor: "#16a34a", // bg-green-600
-              color: "#ffffff", // text-white
-              scale: 1.1, // hover:scale-110
-              x: -6, // hover:-translate-x-6 (leftward lift)
-              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
+              backgroundColor: "#16a34a",
+              color: "#ffffff",
+              scale: 1.1,
+              x: -6,
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
             }}
             whileTap={{
-              backgroundColor: "#16a34a", // bg-green-600
-              color: "#ffffff", // text-white
-              scale: 1.1, // tap:scale-110
-              x: -6, // tap:-translate-x-6 (leftward lift)
-              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
+              backgroundColor: "#16a34a",
+              color: "#ffffff",
+              scale: 1.1,
+              x: -6,
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
             }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
@@ -73,22 +71,21 @@ const BulkServicesSection = () => {
             </p>
           </motion.div>
 
-          {/* Card 3 */}
           <motion.div
             className="bg-gray-100 text-black rounded-lg p-6 shadow-md w-[234px] h-[304px]"
             whileHover={{
-              backgroundColor: "#16a34a", // bg-green-600
-              color: "#ffffff", // text-white
-              scale: 1.1, // hover:scale-110
-              x: -6, // hover:-translate-x-6 (leftward lift)
-              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
+              backgroundColor: "#16a34a",
+              color: "#ffffff",
+              scale: 1.1,
+              x: -6,
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
             }}
             whileTap={{
-              backgroundColor: "#16a34a", // bg-green-600
-              color: "#ffffff", // text-white
-              scale: 1.1, // tap:scale-110
-              x: -6, // tap:-translate-x-6 (leftward lift)
-              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
+              backgroundColor: "#16a34a",
+              color: "#ffffff",
+              scale: 1.1,
+              x: -6,
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
             }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
@@ -99,22 +96,21 @@ const BulkServicesSection = () => {
             </p>
           </motion.div>
 
-          {/* Card 4 */}
           <motion.div
             className="bg-gray-100 text-black rounded-lg p-6 shadow-md w-[234px] h-[304px]"
             whileHover={{
-              backgroundColor: "#16a34a", // bg-green-600
-              color: "#ffffff", // text-white
-              scale: 1.1, // hover:scale-110
-              x: -6, // hover:-translate-x-6 (leftward lift)
-              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
+              backgroundColor: "#16a34a",
+              color: "#ffffff",
+              scale: 1.1,
+              x: -6,
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
             }}
             whileTap={{
-              backgroundColor: "#16a34a", // bg-green-600
-              color: "#ffffff", // text-white
-              scale: 1.1, // tap:scale-110
-              x: -6, // tap:-translate-x-6 (leftward lift)
-              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)", // Enhanced shadow
+              backgroundColor: "#16a34a",
+              color: "#ffffff",
+              scale: 1.1,
+              x: -6,
+              boxShadow: "0 10px 15px rgba(0, 0, 0, 0.3)",
             }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >

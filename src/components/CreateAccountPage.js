@@ -100,7 +100,7 @@ const CreateAccountPage = () => {
           variants={sectionVariants}
         >
           <img
-            src="/images/logo.png"
+            src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755532651/logo_dzlt0y.png"
             alt="EasyEats Logo"
             className="h-12 object-contain mb-8 mx-auto"
           />
@@ -222,7 +222,7 @@ const CreateAccountPage = () => {
           </p>
 
           <img
-            src="/images/logo.png"
+            src="https://res.cloudinary.com/dsci2gspy/image/upload/v1755532651/logo_dzlt0y.png"
             alt="EasyEats Logo"
             className="h-6 object-contain mx-auto"
           />
