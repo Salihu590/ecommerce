@@ -7,7 +7,7 @@ export const fruits = [
 ];
 
 export const vegetables = [
-  { id: 6, name: "Carrot", price: 500.0, image: "https://res.cloudinary.com/dsci2gspy/image/upload/v1755537041/carrot_aorsla.jpg" },
+  { id: 6, name: "Carrot", price: 550.0, image: "https://res.cloudinary.com/dsci2gspy/image/upload/v1755537041/carrot_aorsla.jpg" },
   { id: 7, name: "Tomato", price: 600.0, image: "https://res.cloudinary.com/dsci2gspy/image/upload/v1755537085/tomato_n7ldyc.jpg" },
   { id: 8, name: "Lettuce", price: 250.0, image: "https://res.cloudinary.com/dsci2gspy/image/upload/v1755537097/lettuce_juk7tq.jpg" },
   { id: 9, name: "Cucumber", price: 300.0, image: "https://res.cloudinary.com/dsci2gspy/image/upload/v1755537119/cucumber_eewcmk.jpg" },
